@@ -3,10 +3,8 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
 import { Provider } from "redux";
 import { render } from "react-dom";
-import { App } from "./app/components/App";
 
-import { User } from "./app/components/User";
-import { Main } from "./app/components/Main";
+import App from "./App";
 
 //1.1: Reducer with initial state
 const mathReducer = (
@@ -40,8 +38,8 @@ const mathReducer = (
 
 const userReducer = (
   state = {
-    name: "Max",
-    age: 27
+    name: "YOIS",
+    age: 43
   },
   action
 ) => {
@@ -71,7 +69,7 @@ const userReducer = (
 // };
 // //1: Store responsible for change the states
 const store = createStore(
-  combineReducers({ mathReducer, userReducer }),
+  combineReducers({ math: mathReducer, user: userReducer }),
   {},
   // myLogger,
   applyMiddleware(createLogger())
@@ -97,12 +95,13 @@ store.dispatch({
 
 store.dispatch({
   type: "SET_AGE",
-  payload: 30
+  payload: 44
 });
 
+const root = "root";
 render(
   <Provider store={store}>
     <App />
   </Provider>,
-  window.document.getElementById("app")
+  window.document.getElementById(root)
 );
