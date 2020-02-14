@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Main changeUserName={this.changeUserName.bind(this)} />
+        <Main changeUserName={() => this.props.setName("Lili")} />
         <User username={this.props.user.name} />
       </div>
     );
