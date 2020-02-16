@@ -5,11 +5,6 @@ import { User } from "./components/User";
 import { Main } from "./components/Main";
 
 class App extends React.Component {
-  // constructor() {
-  //   super();
-  // }
-  changeUserName(newName) {}
-
   render() {
     return (
       <div className="container">
@@ -19,14 +14,14 @@ class App extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     user: state.user,
     math: state.math
   };
 };
 
-const mapDispatchToPorps = dispatch => {
+const mapDispatchToPorps = (dispatch) => {
   return {
     setName: name => {
       dispatch({

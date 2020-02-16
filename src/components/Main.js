@@ -1,5 +1,4 @@
 import React from "react";
-
 export class Main extends React.Component {
   render() {
     return (
@@ -13,7 +12,7 @@ export class Main extends React.Component {
           <div className="col-xs-12">
             <button
               className="btn btn-primary"
-              onClick={() => this.props.changeUsername("Anna")}
+              onClick={() => this.props.setName()}
             >
               Change the Username
             </button>
