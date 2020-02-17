@@ -43,7 +43,7 @@ const userReducer = (
   },
   action
 ) => {
-  //
+  //actions defeinitions
   switch (action.type) {
     case "SET_NAME":
       state = {
@@ -81,8 +81,8 @@ store.subscribe(() => {
   console.log("Sotre updated!", newLocal_1);
 });
 
-//2: Dispathcers
-store.dispatch({
+//
+/* store.dispatch({
   type: "ADD",
   payload: 100
 });
@@ -98,7 +98,7 @@ store.dispatch({
 store.dispatch({
   type: "SET_AGE",
   payload: 44
-});
+}); */
 
 const root = "root";
 render(

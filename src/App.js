@@ -8,20 +8,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Main changeUserName={() => this.props.setName("Lili")} />
+        <Main changeUserName={() => this.props.setName("App-Lili")} />
         <User username={this.props.user.name} />
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     user: state.user,
     math: state.math
   };
 };
 
-const mapDispatchToPorps = (dispatch) => {
+const mapDispatchToPorps = dispatch => {
   return {
     setName: name => {
       dispatch({
