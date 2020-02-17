@@ -16,6 +16,12 @@ export class Main extends React.Component {
             >
               Change the Username
             </button>
+            <button
+              className="btn btn-primary"
+              onClick={() => this.props.changeUserAge(100)}
+            >
+              Change Age
+            </button>
           </div>
         </div>
       </div>

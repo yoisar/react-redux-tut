@@ -11,7 +11,9 @@ export class User extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-            <p>User Name: {this.props.username}</p>
+            <p>
+              User Name: {this.props.username}, Age: {this.props.userage}
+            </p>
           </div>
         </div>
       </div>

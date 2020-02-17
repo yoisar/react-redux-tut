@@ -8,8 +8,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Main changeUserName={() => this.props.setName("App-Lili")} />
-        <User username={this.props.user.name} />
+        <Main
+          changeUserName={() => this.props.setName("App-Lili")}
+          changeUserAge={() => this.props.setAge(41)}
+        />
+        <User username={this.props.user.name} userage={this.props.user.age} />
       </div>
     );
   }
@@ -27,6 +30,12 @@ const mapDispatchToPorps = dispatch => {
       dispatch({
         type: "SET_NAME",
         payload: name
+      });
+    },
+    setAge: age => {
+      dispatch({
+        type: "SET_AGE",
+        payload: age
       });
     }
   };
