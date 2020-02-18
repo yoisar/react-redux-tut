@@ -1,15 +1,19 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { createLogger } from "redux-logger";
+import thunk from "redux-thunk";
+import promise from "redux-promise-middleware";
 
-import from "./reducers"
-const combinedReducers = { math: mathReducer, user: userReducer };
+import user from "./reducers/userReducer";
+import math from "./reducers/mathReducer";
+
+const combinedReducers = { math, user };
 // //1: Store responsible for change the states
 const store = createStore(
   combineReducers(combinedReducers),
   {},
   // myLogger,
   applyMiddleware(createLogger())
-);
+); 
 
 // const myLogger = store => next => action => {
 //   console.log("Logged Action :", action);

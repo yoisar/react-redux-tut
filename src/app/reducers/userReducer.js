@@ -1,4 +1,4 @@
-export default userReducer =  (
+const userReducer = (
   state = {
     name: "YOIS",
     age: 43
@@ -24,4 +24,5 @@ export default userReducer =  (
       break;
   }
   return state;
-});
+};
+export default userReducer;

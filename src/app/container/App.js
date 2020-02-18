@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { User } from "./../components/User";
 import { Main } from "./../components/Main";
 
+import { setName, setAge } from "../actions/userActions";
+
 class App extends React.Component {
   render() {
     return (
@@ -27,16 +29,10 @@ const mapStateToProps = state => {
 const mapDispatchToPorps = dispatch => {
   return {
     setName: name => {
-      dispatch({
-        type: "SET_NAME",
-        payload: name
-      });
+      dispatch(setName(name));
     },
     setAge: age => {
-      dispatch({
-        type: "SET_AGE",
-        payload: age
-      });
+      dispatch(setAge(age));
     }
   };
 };

@@ -1,5 +1,4 @@
-//1.1: Reducer with initial state
-export default mathReducer = (
+const mathReducer = (
   state = {
     result: 1,
     lastValues: []
@@ -26,4 +25,5 @@ export default mathReducer = (
       break;
   }
   return state;
-});
+};
+export default mathReducer;
